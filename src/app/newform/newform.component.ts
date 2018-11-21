@@ -12,6 +12,6 @@ export class NewformComponent implements OnInit {
   ngOnInit() {
   }
 public myName = "Pradeep Singh";
-
+public myAge = 31;
 public isDisable = false ;
 }

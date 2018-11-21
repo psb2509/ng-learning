@@ -1,5 +1,10 @@
 <div>
   Welcome to newForm . This is {{myName}}
+  <br>
+  My age is {{myAge}}  <!-- This works becuase number can be converted to return a string in the end . -->
+  <br>
+  My age is {{!myAge}}  <!-- This works becuase a number is true by default can be converted to return a string in the end . -->
+  <br>
   <!-- The below line wont work becase interpolation can only be applied to string .disabled is a boolean DOM property . -->
   <!-- <input disabled = {{isDisable}} type = "text" value = "Pradeep"> -->
   <!-- The below line wont work becase disabled is a boolean DOM property . -->
@@ -7,4 +12,9 @@
   <!-- The below line work because there is no data binding method used here and isDisable is not defined here -->
   <!-- <input disabled = isDisable type = "text" value = "Pradeep">  -->
   <input [disabled] = isDisable type = "text" value = "Pradeep">
+  <br> <!-- You can also use an expression with the property binding value  -->
+  <input [disabled] = !isDisable type = "text" value = "Pradeep">
+  <br> <!-- You can also use an "" with your property value defined in the typescript -->
+  <input [disabled] = "isDisable" type = "text" value = "Pradeep">
+  <br>
 </div>
